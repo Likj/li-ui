@@ -19,6 +19,11 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
+    },
+    {
+      path: '/picker',
+      name: 'picker',
+      component: () => import(/* webpackChunkName: "picker" */'./views/picker.vue')
     }
   ]
 });
